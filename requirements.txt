@@ -1,0 +1,26 @@
+# Core
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Data
+yfinance>=0.2.28
+
+# Interactive Brokers API
+# Install manually from: https://interactivebrokers.github.io/
+# or: pip install ibapi  (if available via pip)
+# Recommended: download official IB API and run setup.py
+
+# Configuration & utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional (for advanced analysis)
+# quantstats>=0.0.62
+# empyrical>=0.5.5

@@ -1,0 +1,32 @@
+# ============================================================
+# Configuration - SMA Crossover Strategy
+# ============================================================
+
+strategy:
+  name: "SMA_Crossover"
+  symbol: "AAPL"
+  short_window: 50
+  long_window: 200
+  quantity: 100                 # shares per trade (paper trading)
+
+backtest:
+  start_date: "2020-01-01"
+  end_date: "2025-12-31"
+  initial_capital: 100000
+  commission: 0.001             # 0.1% per trade
+  slippage: 0.0005              # 0.05%
+
+risk:
+  max_position_pct: 0.10        # max 10% of portfolio per position
+  stop_loss_pct: 0.05           # 5% stop loss
+  take_profit_pct: 0.15         # 15% take profit (optional)
+
+ibkr:
+  host: "127.0.0.1"
+  port: 7497                    # 7497 = paper trading | 7496 = live
+  client_id: 1
+  account: ""                   # leave empty for default paper account
+
+logging:
+  level: "INFO"
+  file: "logs/trading.log"
