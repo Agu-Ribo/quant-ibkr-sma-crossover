@@ -1,5 +1,9 @@
 # Quant IBKR – SMA Crossover Strategy
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Proyecto cuantitativo serio para **backtesting** y **paper trading** de una estrategia clásica de cruce de medias móviles (SMA 50 / SMA 200) usando la API oficial de **Interactive Brokers**.
 
 ---
@@ -36,6 +40,7 @@ quant-ibkr-sma-crossover/
 ├── data/                        # Resultados (equity curves, etc.)
 ├── notebooks/                   # Análisis exploratorio (opcional)
 ├── requirements.txt
+├── LICENSE
 ├── .gitignore
 └── README.md
 ```
@@ -174,7 +179,7 @@ Salida esperada:
 
 ## Licencia
 
-MIT License – Siéntete libre de usarlo, modificarlo y mejorarlo.
+Este proyecto está bajo la licencia **MIT**. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 

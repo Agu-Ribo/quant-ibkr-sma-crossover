@@ -47,7 +47,7 @@ class SMACrossoverStrategy:
         Expected columns: ['Close'] (or 'close').
         Returns a copy of the DataFrame with added columns:
             - SMA_short, SMA_long
-            - Signal          (1 = long, -1 = short/flat, 0 = no position change)
+            - Signal          (1 = buy crossover, -1 = sell crossover, 0 = no change)
             - Position        (current position after signal)
         """
         data = df.copy()
@@ -80,7 +80,8 @@ class SMACrossoverStrategy:
         data["Signal"] = data["Signal"].map({2: 1, -2: -1}).fillna(0).astype(int)
 
         # Current position (forward fill of last non-zero raw signal)
-        data["Position"] = data["raw_signal"].replace(to_replace=0, method="ffill").fillna(0)
+        # Avoid deprecated method= parameter
+        data["Position"] = data["raw_signal"].replace(0, pd.NA).ffill().fillna(0).astype(int)
 
         return data
 
